@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="test2.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Mestre -->
+        <div class="master">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Product Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="showDetail('Product 1', 'Product 1 Description', 'Category 1', '$10.00')">
+                        <td>1</td>
+                        <td>Product 1</td>
+                    </tr>
+                    <tr onclick="showDetail('Product 2', 'Product 2 Description', 'Category 2', '$20.00')">
+                        <td>2</td>
+                        <td>Product 2</td>
+                    </tr>
+                    <tr onclick="showDetail('Product 3', 'Product 3 Description', 'Category 3', '$30.00')">
+                        <td>3</td>
+                        <td>Product 3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Detalhe -->
+        <div class="detail" id="detail">
+            <h2>Select a product to see details</h2>
+            <p id="detailText">Details will be displayed here.</p>
+        </div>
+    </div>
+
+    <script>
+        function showDetail(name, description, category, price) {
+            document.getElementById('detail').innerHTML = `
+                <h2>${name}</h2>
+                <p><strong>Description:</strong> ${description}</p>
+                <p><strong>Category:</strong> ${category}</p>
+                <p><strong>Price:</strong> ${price}</p>`;
+        }
+    </script>
+</body>
+</html>
