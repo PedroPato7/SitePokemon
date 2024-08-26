@@ -44,3 +44,22 @@ CREATE TABLE IF NOT EXISTS treinador_pokemon(
 	FOREIGN KEY (id_treinador) REFERENCES treinador (id),
 	FOREIGN KEY (id_pokemon) REFERENCES pokemon (id)
 );
+
+INSERT INTO tipoPokemon (nome) VALUES("Aço");
+INSERT INTO tipoPokemon (nome) VALUES("Água");
+INSERT INTO tipoPokemon (nome) VALUES("Dragão");
+INSERT INTO tipoPokemon (nome) VALUES("Elétrico");
+INSERT INTO tipoPokemon (nome) VALUES("Fada");
+INSERT INTO tipoPokemon (nome) VALUES("Fantasma");
+INSERT INTO tipoPokemon (nome) VALUES("Fogo");
+INSERT INTO tipoPokemon (nome) VALUES("Gelo");
+INSERT INTO tipoPokemon (nome) VALUES("Inseto");
+INSERT INTO tipoPokemon (nome) VALUES("Lutador");
+INSERT INTO tipoPokemon (nome) VALUES("Normal");
+INSERT INTO tipoPokemon (nome) VALUES("Pedra");
+INSERT INTO tipoPokemon (nome) VALUES("Planta");
+INSERT INTO tipoPokemon (nome) VALUES("Psíquico");
+INSERT INTO tipoPokemon (nome) VALUES("Sombrio");
+INSERT INTO tipoPokemon (nome) VALUES("Terrestre");
+INSERT INTO tipoPokemon (nome) VALUES("Venenoso");
+INSERT INTO tipoPokemon (nome) VALUES("Voador");
