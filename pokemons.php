@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokémons - Liga Pokémon</title>
     <link rel="stylesheet" href="css/printStyle.css">
+    <link rel="shortcut icon" href="fav/ligaLogo.ico">
     <script src="script/script.js"></script>
 </head>
 <body>

@@ -9,7 +9,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de treinador - Liga Pokémon</title>
+    <title>Cadastro de Treinador - Liga Pokémon</title>
+    <link rel="shortcut icon" href="fav/ligaLogo.ico">
     <script src="script/script.js"></script>
 </head>
 <body>

@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $treinador["nome"]; ?> - Liga Pokémon</title>
     <link rel="stylesheet" href="css/printStyle.css">
+    <link rel="shortcut icon" href="fav/ligaLogo.ico">
 </head>
 <body>
     <?php
@@ -25,7 +26,7 @@
     <header>
         <h1><?php echo $treinador["nome"]; ?></h1>
     </header>
-    <p>Data de Nascimento: <?php echo $treinador["dataNascimento"]; ?></p>
+    <p>Data de Nascimento: <?php echo date_format(date_create($treinador["dataNascimento"]), "d/m/Y"); ?></p>
     <p>Liga Pokémon: <?php echo $liga["nome"]; ?></p>
     <br>
     <section>

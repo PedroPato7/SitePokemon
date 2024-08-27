@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agradecimentos - Liga Pokémon</title>
     <link rel="stylesheet" href="css/contatoStyle.css">
+    <link rel="shortcut icon" href="fav/ligaLogo.ico">
 </head>
 <body>
     <?php include_once "menu.html"; ?>

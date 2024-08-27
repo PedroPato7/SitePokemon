@@ -9,7 +9,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de liga - Liga Pokémon</title>
+    <link rel="shortcut icon" href="fav/ligaLogo.ico">
+    <title>Cadastro de Liga - Liga Pokémon</title>
 </head>
 <body>
     <?php include "menu.html"; ?>

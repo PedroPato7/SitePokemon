@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $liga["nome"]; ?> - Liga Pokémon</title>
     <link rel="stylesheet" href="css/printStyle.css">
+    <link rel="shortcut icon" href="fav/ligaLogo.ico">
     <script src="script/script.js"></script>
 </head>
 <body>
@@ -39,10 +40,11 @@
             <tbody>
                 <?php
                     foreach($treinadores as $treinador){
+                        $dataNasc = date_create($treinador["dataNascimento"]);
                         echo "<tr>
                             <td>".$treinador["id"]."</td>
                             <td>".$treinador["nome"]."</td>
-                            <td>".$treinador["dataNascimento"]."</td>
+                            <td>".date_format($dataNasc, "d/m/Y")."</td>
                             <td><a href='treinador.php?id=".$treinador["id"]."'>Ver Pokémons</a></td>
                         </tr>";
                     }
