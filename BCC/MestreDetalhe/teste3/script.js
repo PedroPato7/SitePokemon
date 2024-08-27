@@ -56,4 +56,5 @@ function addInput() {
 
 function removeRow(row) {
     row.remove();
+    inputCount--;
 }

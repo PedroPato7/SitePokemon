@@ -50,10 +50,11 @@
         public function inserir(){
             try{
                 $conexao = Conexao::getInstance();
+                $sql = "INSERT INTO pokemon (nome, tipo1, tipo2) VALUES(:nome, :tipo1, ";
                 if($this->tipo2 == null)
-                    $sql = "INSERT INTO pokemon (nome, tipo1) VALUES(:nome, :tipo1)";
+                    $sql .= "null)";
                 else
-                    $sql = "INSERT INTO pokemon (nome, tipo1, tipo2) VALUES(:nome, :tipo1, :tipo2)";
+                    $sql .= ":tipo2)";
                 $comando = $conexao->prepare($sql);
                 $comando->bindValue(":nome", $this->nome);
                 $comando->bindValue(":tipo1", $this->tipo1);
@@ -93,11 +94,17 @@
         public function editar(){
             try{
                 $conexao = Conexao::getInstance();
-                $sql = "UPDATE pokemon SET nome = :nome, tipo1 = :tipo1, tipo2 = :tipo2 WHERE id = :id";
+                $sql = "UPDATE pokemon SET nome = :nome, tipo1 = :tipo1, tipo2 = ";
+                if($this->tipo2 == null)
+                    $sql .= "null";
+                else
+                    $sql .= ":tipo2";
+                $sql .= " WHERE id = :id";
                 $comando = $conexao->prepare($sql);
                 $comando->bindValue(":nome", $this->nome);
                 $comando->bindValue(":tipo1", $this->tipo1);
-                $comando->bindValue(":tipo2", $this->tipo2);
+                if($this->tipo2 != null)
+                    $comando->bindValue(":tipo2", $this->tipo2);
                 $comando->bindValue(":id", $this->id);
                 return $comando->execute();
             } catch(PDOException $e){

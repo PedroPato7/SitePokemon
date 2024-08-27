@@ -26,5 +26,5 @@
     } else if($acao == "excluir")
         Pokemon::excluir($id);
 
-    // header("location:../pokemons.php");
+    header("location:../pokemons.php");
 ?>

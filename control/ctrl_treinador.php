@@ -23,8 +23,10 @@
             $treinador->inserir();
         else
             $treinador->editar();
-    } else if($acao == "excluir")
+    } else if($acao == "excluir"){
+        $id_liga = isset($_GET["id_liga"]) ? $_GET["id_liga"] : 0;
         Treinador::excluir($id);
+    }
 
     header("location:../liga.php?id=".$id_liga);
 ?>

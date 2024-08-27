@@ -48,7 +48,7 @@
                             <td>
                                 <a href="javascript:excluirRegistro('control/ctrl_pokemon.php?id=<?php
                                     echo $pokemon["id"];
-                                ?>&id_liga=<?php echo $id; ?>&acao=excluir')">
+                                ?>&acao=excluir')">
                                     Excluir
                                 </a>
                             </td>
