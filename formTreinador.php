@@ -35,21 +35,25 @@
             </label></p>
             <input type="date" name="dataNascimento" value="<?php if($id > 0) echo $treinador["dataNascimento"]; ?>">
 
-            <p><label for="liga">
+            <p><label for="id_liga">
                 <strong>Liga Pokémon</strong>
             </label></p>
             <select name="id_liga">
-                <option>Escolha a liga</option>
+                <option value="">Escolha a liga</option>
                 <?php
                     foreach($ligas as $liga){
                 ?>
                 <option value="<?php echo $liga["id"]; ?>" <?php if($id > 0 && $treinador["id_liga"] == $liga["id"]) echo "selected"; ?>>
                     <?php echo $liga["nome"]; ?>
-                </option>";
+                </option>
                 <?php
                     }
                 ?>
             </select>
+
+            <p><label for="pokemon">
+                <strong>Pokémons</strong>
+            </label></p>
             <br>
             <br>
             <button type="submit" name="acao" value="salvar"><?php if($id > 0) echo "Editar"; else echo "Cadastrar"; ?></button>
