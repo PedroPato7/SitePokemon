@@ -10,14 +10,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de treinador - Liga Pokémon</title>
+    <script src="script/script.js"></script>
 </head>
 <body>
     <?php
         include "menu.html";
 
         require_once "class/Liga.class.php";
+        require_once "class/Pokemon.class.php";
 
         $ligas = Liga::listar();
+        $pokemons = Pokemon::listar();
     ?>
 
     <header>
@@ -54,7 +57,23 @@
             <p><label for="pokemon">
                 <strong>Pokémons</strong>
             </label></p>
-            <br>
+            <select id="pokemon">
+                <option value="">Escolha seu Pokémon</option>
+                <?php
+                    foreach($pokemons as $pokemon){
+                ?>
+                <option id="pokemon<?php echo $pokemon["id"]; ?>" value="<?php echo $pokemon["id"]; ?>">
+                    <?php echo $pokemon["nome"]; ?>
+                </option>
+                <?php
+                    }
+                ?>
+            </select>
+            <a href="#" onclick="addPokemon()">Adicionar</a>
+            <br><br>
+            <table id="tabelaPokemons">
+                <tbody></tbody>
+            </table>
             <br>
             <button type="submit" name="acao" value="salvar"><?php if($id > 0) echo "Editar"; else echo "Cadastrar"; ?></button>
         </form>

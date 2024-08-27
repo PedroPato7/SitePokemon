@@ -34,7 +34,8 @@ CREATE TABLE IF NOT EXISTS pokemon(
 	tipo1 INT NOT NULL,
 	tipo2 INT,
 	PRIMARY KEY (id),
-	FOREIGN KEY (tipo1, tipo2) REFERENCES tipoPokemon (id)
+	FOREIGN KEY (tipo1) REFERENCES tipoPokemon (id),
+	FOREIGN KEY (tipo2) REFERENCES tipoPokemon (id)
 );
 
 CREATE TABLE IF NOT EXISTS treinador_pokemon(

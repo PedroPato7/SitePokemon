@@ -1,0 +1,41 @@
+@media print {
+    /* Esconder elementos não essenciais na impressão */
+   
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid #000;
+        padding: 8px;
+        text-align: left;
+    }
+
+    /* Aumentar a fonte para melhor leitura */
+    body {
+        font-size: 14pt;
+    }
+
+    /* Remover margens e padding do body */
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Ajustar a largura da tabela para caber na página */
+    table {
+        width: 100%;
+    }
+
+   
+    /* Exibir o cabeçalho em cada nova página impressa */
+    thead {
+        display: table-header-group;
+    }
+
+    /* Ajustar margens para impressão */
+    @page {
+        margin: 1cm;
+    }
+}

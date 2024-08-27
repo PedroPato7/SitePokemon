@@ -10,6 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $liga["nome"]; ?> - Liga Pokémon</title>
+    <link rel="stylesheet" href="css/printStyle.css">
     <script src="script/script.js"></script>
 </head>
 <body>
@@ -43,17 +44,7 @@
                             <td>".$treinador["nome"]."</td>
                             <td>".$treinador["dataNascimento"]."</td>
                             <td><a href='treinador.php?id=".$treinador["id"]."'>Ver Pokémons</a></td>
-                            <td><a href='formTreinador.php?id=".$treinador["id"]."'>Editar</a></td>";
-                ?>
-                            <td>
-                                <a href="javascript:excluirRegistro('control/ctrl_treinador.php?id=<?php
-                                    echo $treinador["id"];
-                                ?>&id_liga=<?php echo $id; ?>&acao=excluir')">
-                                    Excluir
-                                </a>
-                            </td>
-                        </tr>
-                <?php
+                        </tr>";
                     }
                 ?>
             <tbody>

@@ -87,32 +87,5 @@
             }
         }
 
-        public function editar(){
-            try{
-                $conexao = Conexao::getInstance();
-                $sql = "UPDATE treinador SET nome = :nome, dataNascimento = :dataNascimento, id_liga = :id_liga WHERE id = :id";
-                $comando = $conexao->prepare($sql);
-                $comando->bindValue(":nome", $this->nome);
-                $comando->bindValue(":dataNascimento", $this->dataNascimento);
-                $comando->bindValue(":id_liga", $this->id_liga);
-                $comando->bindValue(":id", $this->id);
-                return $comando->execute();
-            } catch(PDOException $e){
-                echo "Erro: ".$e->getMessage();
-            }
-        }
-
-        public static function excluir($id){
-            try{
-                $conexao = Conexao::getInstance();
-                $sql = "DELETE FROM treinador WHERE id = :id";
-                $comando = $conexao->prepare($sql);
-                $comando->bindValue(":id", $id);
-                return $comando->execute();
-            } catch(PDOException $e){
-                echo "Erro: ".$e->getMessage();
-            }
-        }
-
     }
 ?>
